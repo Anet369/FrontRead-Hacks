@@ -1,25 +1,53 @@
-# Unfinished Spaghetti (that works)
-
-This hack is just unfinished spaghetti, that I lost interest in.
-
-Non the less it works and I thought I would publish it here for anyone to play around with.
-
 # DISCLAIMER:
-I am in no way responsible for what you use this for. (So don't come running if you get into trouble).
+I am in no way responsible for what you use this for. <br />
 This has also already been reported to FrontRead awhile ago, but since they haven't changed it yet, I don't think they will.
 
-# How to use
-There are 2 interesting things.
+# Flaws
+1. All the users progress data is stored in the App.userdata variable available through the developer console.
+2. There is no server-side validation on saveUserData meaning you could save your progress to other peoples accounts, thereby resetting their progress
+3. There is no server-side validation on the /auth endpoint (takes a uni-login, returns information about that user, including their saveid)
+
+# How to install
+**OBS**: This only lasts until you refresh the page
+1. Open FrontRead
+2. Press F12
+3. Go to the console tap
+4. Copy Paste the content of the hax.js file into the console
+5. Press enter
+
+# Interesting commands
 ```js
-function LoginAs(uniLogin)
+Hax.impersonate("UNILOGIN")
 ```
 Give it a uni login and it will log you in as that user<br />
-**For noobs**: <br />
-Press F12 > Go to console > Write "LoginAs(**UNILOGIN**)" where **UNILOGIN** is the uni login you want to login as > Press Enter
 
+```js
+Hax.unlockDiploma();
 ```
-$("body").on("keydown"...
+Completes all tests & exercises to unlocks the diploma
+
+```js
+Hax.resetProgress();
 ```
-This section of the code lets you do 2 things
-1. On the home screen (where you can see all the different modules) you can press **Enter** and the diplom will be unlocked (and your teacher will be mad AF)
-2. On the screen where you can start a certain attempt on a certain exercise, you can press **Space** and you get a prompt there you can enter your wanted results
+Deletes all your progress
+
+# What can it to
+Options for completing things are:
+  * completeAllExercises
+  * completeAllTests
+  * unlockAllVideos
+  * unlockDiploma
+
+Options for resetting progress are:
+  * inCompleteAllExercises
+  * inCompleteAllTests
+  * lockAllVideos
+  * deleteEverything
+
+Other fun stuff:
+  * impersonate
+
+# How to use (for noobs)
+Firstly, follow the **How to install** guide above. <br />
+Now you just copy paste one of the interesting commands into the console and press enter <br />
+You can also just type "Hax." and there will come a list of available options <br />
