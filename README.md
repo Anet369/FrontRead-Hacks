@@ -7,14 +7,6 @@ This has also already been reported to FrontRead awhile ago, but since they have
 2. There is no server-side validation on saveUserData meaning you could save your progress to other peoples accounts, thereby resetting their progress
 3. There is no server-side validation on the /auth endpoint (takes a uni-login, returns information about that user, including their saveid)
 
-# How to install
-**OBS**: This only lasts until you refresh the page
-1. Open FrontRead
-2. Press F12
-3. Go to the console tap
-4. Copy Paste the content of the hax.js file into the console
-5. Press enter
-
 # Interesting commands
 ```js
 Hax.impersonate("UNILOGIN")
@@ -46,6 +38,14 @@ Options for resetting progress are:
 
 Other fun stuff:
   * impersonate
+
+# How to install (for noobs)
+**OBS**: This only lasts until you refresh the page
+1. Open FrontRead
+2. Press F12
+3. Go to the console tap
+4. Copy Paste the content of the hax.js file into the console
+5. Press enter
 
 # How to use (for noobs)
 Firstly, follow the **How to install** guide above. <br />
